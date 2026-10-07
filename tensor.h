@@ -53,15 +53,15 @@ Tensor<T>::Tensor(std::vector<T> x, std::vector<T> y) {
              Header { .idx = 0, .len = x.size() }
         ); 
         
-        std::copy(y.begin(), y.end(), std::back_inserter(x));
+        std::copy(y.begin(), y.end(), std::back_inserter(this->data));
         this->header.push_back(
             Header { .idx = x.size(), .len = y.size() } 
         );   
 } 
 
-template<typename T>
-Tensor<T>::Tensor(int idx, Tensor<T> new_arr, int axis) {
-
-}
+// template<typename T>
+// Tensor<T>::Tensor(int idx, Tensor<T> new_arr, int axis) {
+// 
+// }
 
 #endif 
